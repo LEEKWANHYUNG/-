@@ -1,0 +1,17 @@
+<h1>숙제했다 -이관형</h1>
+
+{% for A in posts.all %}
+
+<div class="container">
+
+    <h1>{{ A.Name }}</h1>
+
+    <p>{{ A.date }}</p>
+
+    <p>{{ A.writer }}</p>
+
+    <p>{{ A.summary }}<a href="{% url 'detail' A.id %}">....more</a></p>
+
+</div>
+
+{% endfor %}
